@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace DesignPatterns
+﻿class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        var logger = SynchronousLogger.GetInstance();
+        logger.Log("Hello World!");
+        var logger2 = SynchronousLogger.GetInstance();
+        logger2.Log("Hello world again!");
     }
 }
