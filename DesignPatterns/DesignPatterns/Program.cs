@@ -1,10 +1,13 @@
-﻿class Program
+﻿namespace _01_Singleton
 {
-    static void Main(string[] args)
+    class Program
     {
-        var logger = SynchronousLogger.GetInstance();
-        logger.Log("Hello World!");
-        var logger2 = SynchronousLogger.GetInstance();
-        logger2.Log("Hello world again!");
+        static void Main(string[] args)
+        {
+            var logger = SynchronousLogger.GetInstance();
+            logger.Log("Hello World!");
+            var logger2 = SynchronousLogger.GetInstance();
+            logger2.Log("Hello world again!");
+        }
     }
 }

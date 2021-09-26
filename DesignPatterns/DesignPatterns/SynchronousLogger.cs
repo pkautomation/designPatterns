@@ -1,22 +1,25 @@
 ﻿using System;
 
-class SynchronousLogger
+namespace _01_Singleton
 {
-    private static SynchronousLogger sLogger;
-    private SynchronousLogger() { }
-
-    public static SynchronousLogger GetInstance()
+    class SynchronousLogger
     {
-        if(sLogger == null)
+        private static SynchronousLogger sLogger;
+        private SynchronousLogger() { }
+
+        public static SynchronousLogger GetInstance()
         {
-            sLogger = new SynchronousLogger();
+            if (sLogger == null)
+            {
+                sLogger = new SynchronousLogger();
+            }
+
+            return sLogger;
         }
 
-        return sLogger;
-    }
-
-    public void Log(string msg)
-    {
-        Console.WriteLine($"sLogger: {msg}");
+        public void Log(string msg)
+        {
+            Console.WriteLine($"sLogger: {msg}");
+        }
     }
 }
