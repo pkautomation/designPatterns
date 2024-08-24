@@ -1,22 +1,21 @@
 ﻿using System;
 
-namespace _02_Factory_Method
+namespace _02_Factory_Method;
+
+class Rifle : IWeapon
 {
-    class Rifle : IWeapon
+    public void Assemble()
     {
-        public void Assemble()
-        {
-            Console.WriteLine($"Assembling {this.GetType().Name}");
-        }
+        Console.WriteLine($"Assembling {this.GetType().Name}");
+    }
 
-        public void Shoot()
-        {
-            Console.WriteLine($"{this.GetType().Name} shoot series of bullets");
-        }
+    public void Shoot()
+    {
+        Console.WriteLine($"{this.GetType().Name} shoot series of bullets");
+    }
 
-        public void ShowDescription()
-        {
-            Console.WriteLine($"{this.GetType().Name} description");
-        }
+    public void ShowDescription()
+    {
+        Console.WriteLine($"{this.GetType().Name} description");
     }
 }

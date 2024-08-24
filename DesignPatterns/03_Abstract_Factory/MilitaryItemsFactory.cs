@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace _03_Abstract_Factory;
 
-namespace _03_Abstract_Factory
+internal interface MilitaryItemsFactory
 {
-    internal interface MilitaryItemsFactory
-    {
-        public abstract Medikit CreateMedikit();
-        public abstract Pistol CreatePistol();
-    }
+    public abstract Medikit CreateMedikit();
+    public abstract Pistol CreatePistol();
 }

@@ -1,32 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace _04_Prototype;
 
-namespace _04_Prototype
+internal class Book
 {
-    internal class Book
+    public string Name { get; set; } = string.Empty;
+    public string Title { get; set; } = string.Empty;
+
+    private string author { get; set; }
+
+    public Book(string author)
     {
-        public string Name { get; set; }
-        public string Title { get; set; }
+        this.author = author;
+    }
 
-        private string author { get; set; }
+    public string GetAuthor()
+    {
+        return author;
+    }
 
-        public Book(string author) {
-            this.author = author;
-        }
-
-        public string GetAuthor()
-        {
-            return author;
-        }
-
-        // this deep copy in this case
-        public Book Clone()
-        {
-            Book book = (Book) this.MemberwiseClone();
-            return book;
-        }
+    public Book Clone()
+    {
+        Book book = (Book) this.MemberwiseClone();
+        return book;
     }
 }

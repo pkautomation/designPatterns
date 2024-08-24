@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace _03_Abstract_Factory;
 
-namespace _03_Abstract_Factory
+internal abstract class Medikit : ISupply
 {
-    internal abstract class Medikit : ISupply
-    {
-        public abstract void Use();
-    }
+    public abstract void Use();
 }

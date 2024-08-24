@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace _02_Factory_Method;
 
-namespace _02_Factory_Method
+class RifleFactory : WeaponFactory
 {
-    class RifleFactory : WeaponFactory
+    public override IWeapon Create()
     {
-        public override IWeapon Create()
-        {
-            return new Rifle();
-        }
+        return new Rifle();
     }
 }

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace _02_Factory_Method;
 
-namespace _02_Factory_Method
+interface IWeapon
 {
-    interface IWeapon
-    {
-        void Assemble();
-        void Shoot();
-        void ShowDescription();
-    }
+    void Assemble();
+    void Shoot();
+    void ShowDescription();
 }

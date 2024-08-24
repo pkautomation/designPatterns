@@ -1,17 +1,17 @@
-﻿namespace _01_Singleton
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var logger = SynchronousLogger.GetInstance();
-            logger.Log("Hello World!");
-            var logger2 = SynchronousLogger.GetInstance();
-            
-            logger2.Log("Hello world again!");
+﻿namespace _01_Singleton;
 
-            if (logger == logger2)
-                System.Console.WriteLine("I am the same logger");
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        var logger = SynchronousLogger.GetInstance();
+        logger.Log("Hello World!");
+        var logger2 = SynchronousLogger.GetInstance();
+        logger2.Log("Hello world again!");
+
+        if (!logger.Equals(logger2))
+        {
+            throw new System.Exception("Loggers should be the same");
         }
     }
 }
