@@ -1,12 +1,10 @@
-﻿// so I go to the shop to get some weapon for self defence
+﻿using _03_Abstract_Factory;
 
-using _03_Abstract_Factory;
-
+// so I go to the shop to get some weapon for self defence
 MilitaryItemsFactory factory = new RealMilitaryItemsFactory();
 
 // this gun looks nice, i want to try it!
 var pistolInMyHands = factory.CreatePistol();
-
 pistolInMyHands.Shoot();
 
 // whats inside this medikit?
@@ -18,13 +16,13 @@ medikit.Use();
 
 // leaving the shop and going for the toy shop
 
-// ok, lets find you something son...
+// ok, lets get you something son...
 
 factory = new KidsMilitaryItemsFactory();
 pistolInMyHands = factory.CreatePistol();
-// let my try it
+// let my try it daddy!
 pistolInMyHands.Shoot();
 
-// oh and lets see what inside kids medikit
+// daddy I want a medikit too!
 medikit = factory.CreateMedikit();
 medikit.Use();

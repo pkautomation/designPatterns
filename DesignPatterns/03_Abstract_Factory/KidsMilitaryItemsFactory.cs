@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace _03_Abstract_Factory;
 
-namespace _03_Abstract_Factory
+internal class KidsMilitaryItemsFactory : MilitaryItemsFactory
 {
-    internal class KidsMilitaryItemsFactory : MilitaryItemsFactory
+    public  Medikit CreateMedikit()
     {
-        public  Medikit CreateMedikit()
-        {
-            return new KidsMedikit();
-        }
+        return new KidsMedikit();
+    }
 
-        public Pistol CreatePistol()
-        {
-            return new WaterPistol();
-        }
+    public Pistol CreatePistol()
+    {
+        return new WaterPistol();
     }
 }

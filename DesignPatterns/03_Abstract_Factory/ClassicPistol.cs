@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace _03_Abstract_Factory;
 
-namespace _03_Abstract_Factory
+internal class ClassicPistol : Pistol
 {
-    internal class ClassicPistol : Pistol
+    public override void Shoot()
     {
-        public override void Shoot()
-        {
-            Console.WriteLine("Shooting real bullets. Thats pistol from adults!");
-        }
+        Console.WriteLine("Shooting real bullets. Thats pistol from adults!");
     }
 }
